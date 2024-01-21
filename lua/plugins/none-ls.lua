@@ -1,18 +1,22 @@
 return {
-    -- formatter. https://github.com/jose-elias-alvarez/null-ls.nvim
-    -- Bisogna installare i formatters con Mason e poi inserirli manualmente qui.
-    "nvimtools/none-ls.nvim",
-    config = function()
-        local null_ls = require("null-ls")
-        null_ls.setup({
-            sources = {
-                -- lua
-                null_ls.builtins.formatting.stylua,
-                -- python
-                null_ls.builtins.formatting.black,
-                -- javascript, css, markdown, html
-                null_ls.builtins.formatting.prettier,
-            },
-        })
-    end,
+	-- formatter. https://github.com/jose-elias-alvarez/null-ls.nvim
+	-- Bisogna installare i formatters con Mason e poi inserirli manualmente qui.
+	"nvimtools/none-ls.nvim",
+	config = function()
+		local null_ls = require("null-ls")
+		null_ls.setup({
+			sources = {
+				-- lua || formatter
+				null_ls.builtins.formatting.stylua,
+				-- python || formatter
+				null_ls.builtins.formatting.black,
+				--python || linter
+				null_ls.builtins.diagnostics.flake8,
+				-- javascript, css, markdown, html || formatter
+				null_ls.builtins.formatting.prettier,
+				-- javascript || linter
+				null_ls.builtins.formatting.eslint_d,
+			},
+		})
+	end,
 }

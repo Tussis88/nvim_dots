@@ -1,16 +1,15 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
+    -- highlighting e indenting di base
+    -- https://github.com/nvim-treesitter/nvim-treesitter
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     config = function()
-        local configs = require('nvim-treesitter.configs')
+        local configs = require("nvim-treesitter.configs")
 
         configs.setup({
-            ensure_installed = {'lua', 'python', 'javascript', 'html', 'css'},
+            auto_install = true,
             highlight = { enable = true },
-            indent = { enable = true }
+            indent = { enable = true },
         })
-    end
+    end,
 }
-
--- highlighting e indenting di base 
--- https://github.com/nvim-treesitter/nvim-treesitter
