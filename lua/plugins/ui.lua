@@ -8,7 +8,7 @@ return {
             require("solarized-osaka").setup({
                 styles = {
                     functions = { bold = true },
-                    -- floats = "transparent",
+                    floats = "transparent",
                     sidebars = "transparent",
                 },
             })
