@@ -12,7 +12,9 @@ vim.cmd("set softtabstop=4") -- setta l'indent automatico a 4
 vim.cmd("set shiftwidth=4")  -- setta lo spostamento del testo premento > o < in normal mode
 
 -- CURSORE
-vim.opt.cursorline = true -- evidenzia la riga del cursore
+vim.opt.cursorline = true   -- evidenzia la riga del cursore
+vim.opt.scrolloff = 10      -- il cursore arriva al massimo a 10 righe dal fondo dello schermo
+vim.opt.signcolumn = "yes"  -- la colonna dove vengono segnati gli errori a sx è sempre attiva
 
 -- UI
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }) -- bordi doc window
