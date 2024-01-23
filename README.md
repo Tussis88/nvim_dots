@@ -4,25 +4,26 @@
 
 ## Movimento
 *Per muoversi all'interno di Neovim (i movimenti di base sono h j k l)*
+|||
 |:---:|:---|
-|w|inizio prossima parola|
-|e|fine prossima parola|
-|b|inizio parola precedente|
-|W|inizio prossimo gruppo di parole *ad esempio vim.keymap*|
-|E|fine prossimo gruppo di parole|
-|B|inizio gruppo di parole precedenti|
-|M|muove il cursore al centro dello schermo|
+|`w`|inizio prossima parola|
+|`e`|fine prossima parola|
+|`b`|inizio parola precedente|
+|`W`|inizio prossimo gruppo di parole *ad esempio vim.keymap*|
+|`E`|fine prossimo gruppo di parole|
+|`B`|inizio gruppo di parole precedenti|
+|`M`|muove il cursore al centro dello schermo|
 
 ## Creazione e Movimento Finestre
 |||
 |:---:|:---:|
-|<leader>ss|divide la finestra orizzontalmente|
-|<leader>sv|divide la finestra verticalmente|
-|<leader>so|mantiene attiva una sola finestra *(le altre finiscono nel buffer)*|
-|<leader>sh|si sposta il cursore nella finestra di sinistra|
-|<leader>sl|si sposta il cursore nella finestra di destra|
-|<leader>sj|si sposta il cursore nella finestra di sotto|
-|<leader>sk|si sposta il cursore nella finestra di sopra|
+|`<leader>ss`|divide la finestra orizzontalmente|
+|`<leader>sv`|divide la finestra verticalmente|
+|`<leader>so`|mantiene attiva una sola finestra *(le altre finiscono nel buffer)*|
+|`<leader>sh`|si sposta il cursore nella finestra di sinistra|
+|`<leader>sl`|si sposta il cursore nella finestra di destra|
+|`<leader>sj`|si sposta il cursore nella finestra di sotto|
+|`<leader>sk`|si sposta il cursore nella finestra di sopra|
 
 ## Normal e Visual Mode
 *Azioni di base*
