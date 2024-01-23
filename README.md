@@ -4,8 +4,7 @@
 
 ## Movimento
 *Per muoversi all'interno di Neovim (i movimenti di base sono h j k l)*
-|||
-|:---:|:---:|
+|:---:|:---|
 |w|inizio prossima parola|
 |e|fine prossima parola|
 |b|inizio parola precedente|
