@@ -16,6 +16,8 @@ return {
 				null_ls.builtins.formatting.prettier,
 				-- javascript || linter
 				null_ls.builtins.formatting.eslint_d,
+                -- markdown || linter
+                null_ls.builtins.diagnostics.alex,
 			},
 		})
 	end,
