@@ -11,6 +11,7 @@ return {
                     floats = "transparent",
                     sidebars = "transparent",
                 },
+                dim_inactive = true,
             })
             vim.cmd([[colorscheme solarized-osaka]])
         end,
