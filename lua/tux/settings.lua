@@ -1,9 +1,11 @@
 -- SETTAGGI DI BASE
-vim.cmd("language en_US.UTF-8")            -- setta la lingua in inglese
-vim.opt.fillchars = { eob = " " }          -- elimina la ~ dalle righe vuote
-vim.opt.termguicolors = true               -- setta i colori in maniera corretta per iterm2
-vim.cmd("set number relativenumber")       -- mostra il numero relativo delle righe
-vim.api.nvim_set_hl(0, "StatusLineNC", {}) -- disattiva status line originale
+vim.cmd("language en_US.UTF-8")                         -- setta la lingua in inglese
+vim.opt.fillchars = { eob = " " }                       -- elimina la ~ dalle righe vuote
+vim.opt.termguicolors = true                            -- setta i colori in maniera corretta per iterm2
+vim.cmd("set number relativenumber")                    -- mostra il numero relativo delle righe
+vim.api.nvim_set_hl(0, "StatusLineNC", {})              -- disattiva status line originale
+vim.cmd("set nowrap")                                   -- disattiva il wrapline
+vim.cmd [[autocmd FileType markdown set tw=80 wrap]]    -- wrap attivato per markdown
 
 -- COMPORTAMENTO TAB
 vim.cmd("set expandtab")
