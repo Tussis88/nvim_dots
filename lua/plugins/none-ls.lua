@@ -11,7 +11,7 @@ return {
 				-- python || formatter
 				null_ls.builtins.formatting.black,
 				--python || linter
-				null_ls.builtins.diagnostics.flake8,
+				null_ls.builtins.diagnostics.flake8.with({extra_args = {"--max-line-length", "120"}}),
 				-- javascript, css, markdown, html || formatter
 				null_ls.builtins.formatting.prettier,
 				-- javascript || linter
