@@ -22,7 +22,8 @@ return {
         config = function()
             require("lualine").setup({
                 options = {
-                    theme = "solarized_dark",
+                    theme = "horizon",
+                    -- theme = "solarized_dark",
                     disabled_filetypes = { "alpha", "dashboard", "neo-tree" },
                     -- component_separators = { left = '', right = '' },
                     component_separators = { left = "|", right = "|" },
