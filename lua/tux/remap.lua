@@ -2,6 +2,7 @@ local key = vim.keymap
 
 -- KEYBINDS PER FUNZIONI BASE
 vim.g.mapleader = " " -- barra spaziatrice come leader
+vim.g.maplocalleader = "," -- localleader per neorg
 key.set("n", "<leader>pv", vim.cmd.Ex) -- <leader>pv per aprire il file explorer di vim
 key.set("n", "<leader>cl", ":let @/=''<CR>", {}) -- cancella gli highlight delle ricerche con /
 
@@ -37,6 +38,9 @@ key.set("n", "<leader>gf", vim.lsp.buf.format, {}) -- chiama la funzione di form
 key.set({ "n", "t" }, "<C-c>", function() -- apre e chiude il terminale
 	require("FTerm").toggle()
 end)
+
+-- NEORG
+key.set("n", "<leader>ww", ":Neorg workspace notes<CR>", {}) -- si sposta all'indice di neorg
 
 -- SNIPPETS
 -- i keybinds si trovano in completions.lua

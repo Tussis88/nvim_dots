@@ -7,6 +7,7 @@ vim.api.nvim_set_hl(0, "StatusLineNC", {})              -- disattiva status line
 vim.cmd("set nowrap")                                   -- disattiva il wrapline
 vim.cmd [[autocmd FileType markdown set tw=80 wrap]]    -- wrap attivato per markdown
 vim.cmd("set clipboard=unnamedplus")                    -- y salva nella clipboard
+vim.cmd("set conceallevel=1")                           -- nasconde alcuni elementi markup
 
 -- COMPORTAMENTO TAB
 vim.cmd("set expandtab")

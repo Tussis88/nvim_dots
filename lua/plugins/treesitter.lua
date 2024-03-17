@@ -10,7 +10,7 @@ return {
             auto_install = true,
             highlight = {
                 enable = true,
-                disable = { "markdown" },
+                -- disable = { "markdown" },
             },
 
             indent = { enable = true },
