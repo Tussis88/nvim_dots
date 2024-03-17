@@ -1,23 +1,4 @@
 return {
-    -- {
-    --     -- tema tokyonight https://github.com/folke/tokyonight.nvim
-    --     "folke/tokyonight.nvim",
-    --     lazy = false,
-    --     priority = 1000,
-    --     config = function()
-    --         require("tokyonight").setup({
-    --             style = "dusk",
-    --             transparent = true,
-    --             styles = {
-    --                 functions = { bold = true },
-    --                 floats = "transparent",
-    --                 sidebars = "transparent",
-    --             },
-    --         })
-    --         vim.cmd([[colorscheme tokyonight]])
-    --         vim.api.nvim_set_hl(0, "@markup.italic", { italic = true })
-    --     end,
-    -- },
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -40,8 +21,7 @@ return {
 		config = function()
 			require("lualine").setup({
 				options = {
-					theme = "auto",
-					-- theme = "solarized_dark",
+					theme = "rose-pine-alt", --"rose-pine-alt" per la versione con colori invertiti
 					disabled_filetypes = { "alpha", "dashboard", "neo-tree" },
 					-- component_separators = { left = '', right = '' },
 					component_separators = { left = "|", right = "|" },
@@ -76,3 +56,22 @@ return {
 	-- },
     --
     -- TOKIONIGHT
+    -- {
+    --     -- tema tokyonight https://github.com/folke/tokyonight.nvim
+    --     "folke/tokyonight.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         require("tokyonight").setup({
+    --             style = "dusk",
+    --             transparent = true,
+    --             styles = {
+    --                 functions = { bold = true },
+    --                 floats = "transparent",
+    --                 sidebars = "transparent",
+    --             },
+    --         })
+    --         vim.cmd([[colorscheme tokyonight]])
+    --         vim.api.nvim_set_hl(0, "@markup.italic", { italic = true })
+    --     end,
+    -- },

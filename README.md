@@ -107,3 +107,14 @@ _L'esplora file di base di Neovim_
 |                `<CR>`                | apri file o cartelle |
 |                 `d`                  | crea cartella        |
 |                 `%`                  | crea file            |
+
+## Neorg
+
+_Note, testi e altro_
+
+|                   |                    |
+| :---------------: | :----------------: |
+|        `,`        |   leader locale    |
+|   `<leader>ww`    | apre cartella note |
+| `<localleader>nn` |     nuova nota     |
+|       `za`        | comprimi un header |

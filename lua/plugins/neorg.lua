@@ -17,17 +17,23 @@ return {
 						config = {
 							highlights = {
 								headings = {
-									["1"] = { title = { link = "markdownH1" }, prefix = { link = "markdownH1Delimiter" } },
-									["2"] = { title = { link = "markdownH2" }, prefix = { link = "markdownH2Delimiter" } },
-									["3"] = { title = { link = "markdownH3" }, prefix = { link = "markdownH3Delimiter" } },
-									["4"] = { title = { link = "markdownH4" }, prefix = { link = "markdownH4Delimiter" } },
-									["5"] = { title = { link = "markdownH5" }, prefix = { link = "markdownH5Delimiter" } },
-									["6"] = { title = { link = "markdownH6" }, prefix = { link = "markdownH6Delimiter" } },
+									["1"] = { title = "+markdownH1", prefix = "+markdownH1Delimiter" },
+									["2"] = { title = "+markdownH2", prefix = "+markdownH2Delimiter" },
+									["3"] = { title = "+markdownH3", prefix = "+markdownH3Delimiter" },
+									["4"] = { title = "+markdownH4", prefix = "+markdownH4Delimiter" },
+									["5"] = { title = "+markdownH5", prefix = "+markdownH5Delimiter" },
+									["6"] = { title = "+markdownH6", prefix = "+markdownH6Delimiter" },
+									-- riferimenti a rose-pine https://github.com/rose-pine/neovim/blob/c52167563e6aa44b5fa6fe007faa2bcac71050f0/lua/rose-pine.lua#L570C3-L581C48
 								},
 							},
 						},
 					},
-					["core.concealer"] = { config = { icon_preset = "diamond" } }, -- Adds pretty icons to your documents
+					["core.concealer"] = {
+						config = {
+							icon_preset = "diamond",
+							icons = { heading = { icons = { "❖", "◆", "◈", "◇", "⟡", "⋄" } } },
+						},
+					},
 					["core.dirman"] = { -- Manages Neorg workspaces
 						config = {
 							workspaces = {
