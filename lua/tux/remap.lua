@@ -40,7 +40,8 @@ key.set({ "n", "t" }, "<C-c>", function() -- apre e chiude il terminale
 end)
 
 -- NEORG
-key.set("n", "<leader>ww", ":Neorg workspace notes<CR>", {}) -- si sposta all'indice di neorg
+key.set("n", "<leader>ww", ":Neorg index<CR>", {}) -- si sposta all'indice di neorg
+key.set("n", "<leader>wc", ":Neorg return<CR>", {}) -- chiude tutti i buffer di neorg
 
 -- SNIPPETS
 -- i keybinds si trovano in completions.lua
