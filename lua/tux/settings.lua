@@ -5,15 +5,14 @@ vim.opt.termguicolors = true                            -- setta i colori in man
 vim.cmd("set number relativenumber")                    -- mostra il numero relativo delle righe
 vim.api.nvim_set_hl(0, "StatusLineNC", {})              -- disattiva status line originale
 vim.cmd("set nowrap")                                   -- disattiva il wrapline
-vim.cmd [[autocmd FileType markdown set tw=80 wrap]]    -- wrap attivato per markdown
 vim.cmd("set clipboard=unnamedplus")                    -- y salva nella clipboard
-vim.cmd("set conceallevel=2")                           -- nasconde alcuni elementi markup
+vim.cmd("set conceallevel=3")                           -- nasconde alcuni elementi markup
 
 -- COMPORTAMENTO TAB
 vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")     -- setta il TAB a 4 spazi
-vim.cmd("set softtabstop=4") -- setta l'indent automatico a 4
-vim.cmd("set shiftwidth=4")  -- setta lo spostamento del testo premento > o < in normal mode
+vim.cmd("set tabstop=2")     -- setta il TAB a 4 spazi
+vim.cmd("set softtabstop=2") -- setta l'indent automatico a 4
+vim.cmd("set shiftwidth=2")  -- setta lo spostamento del testo premento > o < in normal mode
 
 -- CURSORE
 vim.opt.cursorline = true   -- evidenzia la riga del cursore

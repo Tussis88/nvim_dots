@@ -41,8 +41,6 @@ end)
 
 -- NEORG
 key.set("n", "<leader>ww", ":Neorg index<CR>", {}) -- si sposta all'indice di neorg
-key.set("n", "<leader>wc", ":Neorg return<CR>", {}) -- chiude tutti i buffer di neorg
-key.set("n", "<leader>wn", ":Neorg toc<CR>", {})    -- attiva la table of content laterale
 
 -- SNIPPETS
 -- i keybinds si trovano in completions.lua
