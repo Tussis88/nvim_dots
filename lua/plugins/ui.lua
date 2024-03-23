@@ -1,21 +1,43 @@
 return {
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
+        "rebelot/kanagawa.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            require("rose-pine").setup({
-                variant = "moon",
-                disable_background = false,
-                styles = {
-                    transparency = true,
+            require("kanagawa").setup({
+                functionStyle = { bold = true },
+                transparent = true,
+                theme = "wave",
+                colors = {
+                    theme = {
+                        all = {
+                            ui = {
+                                bg_gutter = "none",
+                            },
+                        },
+                    },
                 },
+                overrides = function(colors)
+                    local theme = colors.theme
+                    return {
+                        NormalFloat = { bg = "none" },
+                        FloatBorder = { bg = "none" },
+                        FloatTitle = { bg = "none" },
+
+                        -- Save an hlgroup with dark background and dimmed foreground
+                        -- so that you can use it where your still want darker windows.
+                        -- E.g.: autocmd TermOpen * setlocal winhighlight=Normal:NormalDark
+                        NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+
+                        -- Popular plugins that open floats will link to NormalFloat by default;
+                        -- set their background accordingly if you wish to keep them dark and borderless
+                        LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                        MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                    }
+                end,
             })
-            vim.cmd([[colorscheme rose-pine]])
-            -- colori per italico e grassetto in neorg e markdown
-            vim.api.nvim_set_hl(0, "@markup.italic", { italic = true, fg = "#ea9d34" })
-            vim.api.nvim_set_hl(0, "@markup.strong", { bold = true, fg = "#d7827e" })
+
+            vim.cmd([[colorscheme kanagawa]])
         end,
     },
     {
@@ -24,7 +46,7 @@ return {
         config = function()
             require("lualine").setup({
                 options = {
-                    theme = "rose-pine-alt", --"rose-pine-alt" per la versione con colori invertiti
+                    theme = "iceberg_dark", --"rose-pine-alt" per la versione con colori invertiti
                     disabled_filetypes = { "alpha", "dashboard", "neo-tree" },
                     -- component_separators = { left = '', right = '' },
                     component_separators = { left = "|", right = "|" },
@@ -64,8 +86,8 @@ return {
             -- local indent = "passive"
             local hooks = require("ibl.hooks")
             hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-                vim.api.nvim_set_hl(0, "focus", { fg = "#8f79c1" })
-                -- vim.api.nvim_set_hl(0, "passive", { fg = "#41425e" })
+                vim.api.nvim_set_hl(0, "focus", { fg = "#917fb3" })
+                -- vim.api.nvim_set_hl(0, "passive", { fg = "#2b2b2b" })
             end)
             require("ibl").setup({
                 scope = {
@@ -81,6 +103,27 @@ return {
         end,
     },
 }
+
+-- ROSE PINE
+-- {
+--     "rose-pine/neovim",
+--     name = "rose-pine",
+--     lazy = false,
+--     priority = 1000,
+--     config = function()
+--         require("rose-pine").setup({
+--             variant = "moon",
+--             disable_background = false,
+--             styles = {
+--                 transparency = true,
+--             },
+--         })
+--         vim.cmd([[colorscheme rose-pine]])
+--         -- colori per italico e grassetto in neorg e markdown
+--         vim.api.nvim_set_hl(0, "@markup.italic", { italic = true, fg = "#ea9d34" })
+--         vim.api.nvim_set_hl(0, "@markup.strong", { bold = true, fg = "#d7827e" })
+--     end,
+-- },
 
 -- SOLARIZED OSAKA
 -- {
@@ -100,7 +143,7 @@ return {
 --         vim.cmd([[colorscheme solarized-osaka]])
 --     end,
 -- },
---
+
 -- TOKIONIGHT
 -- {
 --     -- tema tokyonight https://github.com/folke/tokyonight.nvim
