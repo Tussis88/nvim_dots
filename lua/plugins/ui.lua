@@ -38,6 +38,8 @@ return {
             })
 
             vim.cmd([[colorscheme kanagawa]])
+            vim.api.nvim_set_hl(0, "@markup.italic", { italic = true, fg = "#8ab3c7" })
+            vim.api.nvim_set_hl(0, "@markup.strong", { bold = true, fg = "#6c8492" })
         end,
     },
     {
