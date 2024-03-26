@@ -12,7 +12,6 @@ return {
             "luarocks.nvim",
             "nvim-lua/plenary.nvim",
         },
-        -- build = ":Neorg sync-parsers",
         lazy = false,
         ft = "norg",
         cmd = "Neorg",
@@ -40,7 +39,10 @@ return {
                         config = {
                             icon_preset = "diamond",
                             -- riordina i diamani dal più grande al più piccolo
-                            icons = { heading = { icons = { "❖", "◆", "◈", "◇", "⟡", "⋄" } } },
+                            icons = {
+                                code_block = { conceal = true },
+                                heading = { icons = { "❖", "◆", "◈", "◇", "⟡", "⋄" } },
+                            },
                         },
                     },
                     ["core.dirman"] = { -- Manages Neorg workspaces
@@ -54,6 +56,9 @@ return {
                     -- chiude l`indice degli header una volta selezionato uno
                     ["core.qol.toc"] = {
                         config = { close_after_use = true },
+                    },
+                    ["core.esupports.metagen"] = {
+                        config = { type = "auto" },
                     },
                 },
             })
