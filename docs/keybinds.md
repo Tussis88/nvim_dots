@@ -1,26 +1,26 @@
-## ..In lavorazione..
+# Main keybindings for Neovim
 
-# KEYBINDING
+## Movement
 
-## Movimento
+_The main keys for moving around a document_
 
-_Per muoversi all'interno di Neovim (i movimenti di base sono h j k l)_
-
-|     |                                                          |
-| :-: | :------------------------------------------------------- |
-| `w` | inizio prossima parola                                   |
-| `e` | fine prossima parola                                     |
-| `b` | inizio parola precedente                                 |
-| `W` | inizio prossimo gruppo di parole _ad esempio vim.keymap_ |
-| `E` | fine prossimo gruppo di parole                           |
-| `B` | inizio gruppo di parole precedenti                       |
-| `M` | muove il cursore al centro dello schermo                 |
+|        key         | description                                              |
+| :----------------: | :------------------------------------------------------- |
+| `h`, `j`, `k`, `l` | main keys for basic movement                             |
+|        `w`         | inizio prossima parola                                   |
+|        `e`         | fine prossima parola                                     |
+|        `b`         | inizio parola precedente                                 |
+|        `W`         | inizio prossimo gruppo di parole _ad esempio vim.keymap_ |
+|        `E`         | fine prossimo gruppo di parole                           |
+|        `B`         | inizio gruppo di parole precedenti                       |
+|        `M`         | muove il cursore al centro dello schermo                 |
+|    `C-d`, `C-u`    | down and up half a page                                  |
 
 ## Creazione e Movimento Finestre
 
 _Comandi per creare finestre e muoversi al loro interno_
 
-|              |                                                                     |
+|     key      | description                                                         |
 | :----------: | :------------------------------------------------------------------ |
 | `<leader>ss` | divide la finestra orizzontalmente                                  |
 | `<leader>sv` | divide la finestra verticalmente                                    |
@@ -34,7 +34,7 @@ _Comandi per creare finestre e muoversi al loro interno_
 
 _Azioni di base_
 
-|                            |                                                           |
+|            key             | description                                               |
 | :------------------------: | :-------------------------------------------------------- |
 |            `y`             | Copia selezione                                           |
 |            `yy`            | Copia intera riga                                         |
@@ -53,7 +53,7 @@ _Azioni di base_
 
 _commenta e decommenta le righe o il testo_
 
-|                        |                                |
+|          key           | description                    |
 | :--------------------: | :----------------------------- |
 | `gcc` _in normal mode_ | commenta la riga               |
 | `gbc` _in normal mode_ | commenta il blocco             |
@@ -64,7 +64,7 @@ _commenta e decommenta le righe o il testo_
 
 _Esplora File e visualizzatore di buffer_
 
-|                                  |                                            |
+|               key                | description                                |
 | :------------------------------: | :----------------------------------------- |
 |          `<leader> nn`           | Apre e chiude neo tree                     |
 |           `<leader>nb`           | Apre i buffer attivi                       |
@@ -78,43 +78,33 @@ _Esplora File e visualizzatore di buffer_
 
 _Fuzzy Finder_
 
-|              |                                                       |
+|     key      | description                                           |
 | :----------: | :---------------------------------------------------- |
 | `<leader>ff` | trova file partendo dalla cartella in cui ci si trova |
 | `<leader>fg` | live grep                                             |
 | `<leader>fb` | buffers                                               |
 | `<leader>fh` | help                                                  |
 
-## Lsp
+## Lsp and Diagnostics
 
 _comandi per lavorare con i server lsp_
 
-|                     |                                      |
-| :-----------------: | :----------------------------------- |
-|         `K`         | mostra info sulla parola selezionata |
-|        `gd`         | va alla definizione della funzione   |
-|    `<leader>ca`     | code actions                         |
-| `ctrl-k` e `ctrl-j` | seleziona tra i vari snippets        |
-|       `<CR>`        | seleziona lo snippet                 |
+|         key         | description                                        |
+| :-----------------: | :------------------------------------------------- |
+|         `K`         | mostra info sulla parola selezionata               |
+|        `gd`         | va alla definizione della funzione                 |
+|    `<leader>ca`     | code actions                                       |
+| `ctrl-k` e `ctrl-j` | seleziona tra i vari snippets                      |
+|       `<CR>`        | seleziona lo snippet                               |
+|    `<leader>ds˜`    | show diagnostics of current line in a float window |
 
 ## Esplora File
 
 _L'esplora file di base di Neovim_
 
-|                                      |                      |
+|                 key                  | description          |
 | :----------------------------------: | :------------------- |
 | `:Ex *<leader>pv` _(in normal mode)_ | apri l'esplora file  |
 |                `<CR>`                | apri file o cartelle |
 |                 `d`                  | crea cartella        |
 |                 `%`                  | crea file            |
-
-## Neorg
-
-_Note, testi e altro_
-
-|                   |                    |
-| :---------------: | :----------------: |
-|        `,`        |   leader locale    |
-|   `<leader>ww`    | apre cartella note |
-| `<localleader>nn` |     nuova nota     |
-|       `za`        | comprimi un header |

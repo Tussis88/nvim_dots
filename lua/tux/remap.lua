@@ -26,10 +26,11 @@ key.set("n", "<leader>nn", ":Neotree filesystem reveal right toggle<CR>", {}) --
 key.set("n", "<leader>nb", ":Neotree focus buffers reveal float toggle<CR>", {}) -- apre una finestra con i buffer attivi
 key.set("n", "<leader>nc", ":Neotree close<CR>", {}) -- chiude le finestre di neotree
 
--- LSP
+-- LSP e DIAGNOSTICS
 key.set("n", "K", vim.lsp.buf.hover, {}) -- mostra info sulla parola selezionata
 key.set("n", "gd", vim.lsp.buf.definition, {}) -- va le definizioni della funzione
 key.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {}) -- code actions)
+key.set("n", "<leader>ds", function() vim.diagnostic.open_float() end, {})
 
 -- NONE-LS (Formatter)
 key.set("n", "<leader>gf", vim.lsp.buf.format, {}) -- chiama la funzione di formattazione
