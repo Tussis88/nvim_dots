@@ -57,8 +57,15 @@ return {
                     ["core.qol.toc"] = {
                         config = { close_after_use = true },
                     },
+                    -- setta automaticamente i metadati per i file .neorg che non li hanno
                     ["core.esupports.metagen"] = {
                         config = { type = "auto" },
+                    },
+                    -- definisce la strategia per generare l'indice 
+                    -- "by_path" -> in base alla struttura delle cartelle
+                    -- "default -> in base alle categorie dei metadati
+                    ["core.summary"] = {
+                        config = { strategy = "default"},
                     },
                 },
             })
