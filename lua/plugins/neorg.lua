@@ -61,11 +61,11 @@ return {
                     ["core.esupports.metagen"] = {
                         config = { type = "auto" },
                     },
-                    -- definisce la strategia per generare l'indice 
+                    -- definisce la strategia per generare l'indice con :Neorg generate-workspace-summary 
                     -- "by_path" -> in base alla struttura delle cartelle
                     -- "default -> in base alle categorie dei metadati
                     ["core.summary"] = {
-                        config = { strategy = "default"},
+                        config = { strategy = "by_path"},
                     },
                 },
             })
