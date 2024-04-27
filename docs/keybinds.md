@@ -1,4 +1,4 @@
-# Main keybindings for Neovim
+# Cheat Sheet for my setup
 
 ## Movement
 

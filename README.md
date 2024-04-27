@@ -7,4 +7,4 @@ todo
 todo
 
 ## Keybindings
-[keybindings](/docs/keybinds.md)
+[Here](/docs/keybinds.md) you can find the cheat sheet.
