@@ -4,21 +4,21 @@
 
 _The main keys for moving around a document_
 
-|        key         | description                                              |
-| :----------------: | :------------------------------------------------------- |
-| `h`, `j`, `k`, `l` | main keys for basic movement                             |
-|        `w`         | inizio prossima parola                                   |
-|        `e`         | fine prossima parola                                     |
-|        `b`         | inizio parola precedente                                 |
-|        `W`         | inizio prossimo gruppo di parole _ad esempio vim.keymap_ |
-|        `E`         | fine prossimo gruppo di parole                           |
-|        `B`         | inizio gruppo di parole precedenti                       |
-|        `M`         | muove il cursore al centro dello schermo                 |
-|    `C-d`, `C-u`    | down and up half a page                                  |
+|        key         | description                                 |
+| :----------------: | :------------------------------------------ |
+| `h`, `j`, `k`, `l` | main keys for basic movement                |
+|        `w`         | beginning of next word                      |
+|        `e`         | end of next word                            |
+|        `b`         | beginning of previous word                  |
+|        `W`         | beginning of next word.group                |
+|        `E`         | end of next word.group                      |
+|        `B`         | beginning of previous word.group            |
+|        `M`         | move the cursor in the center of the screen |
+|    `C-d`, `C-u`    | move down and up half a page                |
 
-## Creazione e Movimento Finestre
+## Creation and movement between windows
 
-_Comandi per creare finestre e muoversi al loro interno_
+_Commands for creating new windows and navigating through them_
 
 |     key      | description                                                         |
 | :----------: | :------------------------------------------------------------------ |
@@ -108,3 +108,12 @@ _L'esplora file di base di Neovim_
 |                `<CR>`                | apri file o cartelle |
 |                 `d`                  | crea cartella        |
 |                 `%`                  | crea file            |
+
+## Useful stuff
+
+_Some useful functions that i use_
+
+|                 key                  | description                                          |
+| :----------------------------------: | :--------------------------------------------------- |
+| `:%s/search_this/replace_with_this/` | search for a string and replace it one time per line |
+| `%s/search_this/replace_with_this/g` | search for a string and replace it everywhere        |
