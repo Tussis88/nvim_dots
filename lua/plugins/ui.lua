@@ -7,7 +7,8 @@ return {
             require("kanagawa").setup({
                 functionStyle = { bold = true },
                 transparent = true,
-                theme = "wave",
+                -- theme = "lotus", -- light theme for when outside
+                theme = "wave", -- dark theme
                 colors = {
                     theme = {
                         all = {
