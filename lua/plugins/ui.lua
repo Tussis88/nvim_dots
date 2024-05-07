@@ -6,9 +6,7 @@ return {
         config = function()
             require("kanagawa").setup({
                 functionStyle = { bold = true },
-                transparent = true,
-                -- theme = "lotus", -- light theme for when outside
-                theme = "wave", -- dark theme
+                transparent = true, -- turn to false for light theme
                 colors = {
                     theme = {
                         all = {
@@ -38,28 +36,10 @@ return {
                 end,
             })
 
-            vim.cmd([[colorscheme kanagawa]])
+            vim.cmd([[colorscheme kanagawa-wave]]) -- dark theme
+            -- vim.cmd([[colorscheme kanagawa-lotus]])  -- light theme
             vim.api.nvim_set_hl(0, "@markup.italic", { italic = true, fg = "#8ab3c7" })
             vim.api.nvim_set_hl(0, "@markup.strong", { bold = true, fg = "#6c8492" })
-        end,
-    },
-    {
-        -- lualine      https://github.com/nvim-lualine/lualine.nvim
-        "nvim-lualine/lualine.nvim",
-        config = function()
-            require("lualine").setup({
-                options = {
-                    theme = "iceberg_dark", --"rose-pine-alt" per la versione con colori invertiti
-                    disabled_filetypes = { "alpha", "dashboard", "neo-tree" },
-                    -- component_separators = { left = '', right = '' },
-                    component_separators = { left = "|", right = "|" },
-                    -- section_separators = { left = '', right = '' },
-                    section_separators = { left = "", right = "" },
-                },
-                sections = {
-                    lualine_x = { "encoding", { "fileformat", symbols = { unix = "" } }, "filetype" },
-                },
-            })
         end,
     },
     {
