@@ -1,7 +1,7 @@
 return {
 	-- highlights the colors in the code
 	-- https://github.com/NvChad/nvim-colorizer.lua
-	"/NvChad/nvim-colorizer.lua",
+	"NvChad/nvim-colorizer.lua",
 	config = function()
 		require("colorizer").setup({
 			filetypes = {
