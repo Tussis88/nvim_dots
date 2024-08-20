@@ -36,7 +36,7 @@ key.set("n", "<leader>ds", function() vim.diagnostic.open_float() end, {})
 key.set("n", "<leader>gf", vim.lsp.buf.format, {}) -- chiama la funzione di formattazione
 
 -- FTERM
-key.set({ "n", "t" }, "<C-c>", function() -- apre e chiude il terminale
+key.set({ "n", "t" }, "<C-t>", function() -- apre e chiude il terminale
 	require("FTerm").toggle()
 end)
 

@@ -18,7 +18,7 @@ return {
 				-- javascript, css, markdown, html || formatter
 				null_ls.builtins.formatting.prettier,
 				-- javascript || linter
-				-- require("none-ls.diagnostics.eslint_d"),     per far funzionare correttamente eslint devo creare un file di configurazione (o generico o per il singolo progetto)
+				require("none-ls.diagnostics.eslint_d"),     --per far funzionare correttamente eslint devo creare un file di configurazione (o generico o per il singolo progetto)
 				-- markdown || linter
 				null_ls.builtins.diagnostics.alex,
 			},
