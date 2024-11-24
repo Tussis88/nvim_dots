@@ -6,7 +6,7 @@ return {
         config = function()
             require("kanagawa").setup({
                 functionStyle = { bold = true },
-                transparent = true, -- turn to false for light theme
+                transparent = false, -- turn to false for light theme
                 colors = {
                     theme = {
                         all = {
